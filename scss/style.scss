@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+$globalColor: #1f73cf;
+$globalColor2: #1e2e60;
+$simpleColor: #fff;
+$globalFont: "Barlow", sans-serif;
+$globalFont2: "Ubuntu", sans-serif;
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  color: $simpleColor;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  .first-header {
+    @include flex;
+    background: $globalColor2;
+    padding: 20px 80px;
+    .nav-info {
+      display: flex;
+      gap: 2rem;
+      a {
+        font-family: $globalFont;
+      }
+    }
+    .networks {
+      display: flex;
+      gap: 2rem;
+      a {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .second-header {
+    @include flex;
+    background: $globalColor;
+    padding: 20px 80px;
+    z-index: 999;
+    .logo {
+      font-size: 2rem;
+      font-family: $globalFont2;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      img {
+        width: 10%;
+        margin-right: 20px;
+      }
+    }
+    .navigation {
+      display: flex;
+      gap: 3rem;
+      z-index: 1;
+      a {
+        font-size: 1.2rem;
+        font-family: $globalFont;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 1370px) {
+    .first-header {
+      padding: 14px 60px;
+    }
+    .second-header {
+      padding: 12px 60px;
+      .logo {
+        img {
+          width: 9%;
+        }
+      }
+      .hamburger {
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .first-header {
+      padding: 15px 20px;
+      flex-direction: column;
+
+      .nav-info {
+        display: flex;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 10px;
+
+        a {
+          padding: 10px 0px;
+          margin: 0;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    .first-header {
+      padding: 15px 20px;
+      flex-direction: column;
+      .nav-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 0;
+        a {
+          padding: 10px 0px;
+          margin: 0;
+        }
+      }
+    }
+    .second-header {
+      z-index: 999;
+
+      padding: 5px 20px;
+      .logo{
+        font-size: 1.5rem;
+        img{
+          width: 25%;
+          margin-right: 3px;
+        }
+      }
+      .navigation {
+        position: absolute;
+        display: inline;
+        background: $globalColor;
+        top: 215px;
+        width: 100%;
+        left: 0;
+        height: 0vh;
+        text-align: center;
+        padding: 0 20px;
+        transition: .5s ease-in-out;
+        li {
+          border-bottom: 1px solid $simpleColor;
+          padding: 20px 0px;
+          display: none;
+          a{
+            margin: 10px 0px;
+          }
+        }
+        &.active{
+          height: 30vh;
+          li{
+            display: block;
+          }
+        }
+      }
+      .hamburger {
+        display: block;
+        .fa-xmark {
+          display: none;
+        }
+        .fa-bars {
+          font-size: 1.5rem;
+        }
+        &.active{
+          .fa-xmark{
+            display: block;
+            font-size: 1.5rem;
+          }
+          .fa-bars{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
