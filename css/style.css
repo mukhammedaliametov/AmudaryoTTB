@@ -197,10 +197,12 @@ header {
     text-align: center;
     width: 100%;
     padding: 50px;
+    box-shadow: inset 0 0 0 1000px #000000a1;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: url(../images/hero-bg.jpg); }
+    text-shadow: 5px -10px 10px 5px;
+    background-image: url(https://daryo.uz/cache/2020/06/photo_2020-06-19_08-02-09-1280x905.jpg); }
   #news .news {
     padding: 0 30px; }
     #news .news .janaliqlar {
@@ -239,6 +241,7 @@ header {
   #rahbariyat h1 {
     font-family: "Barlow", sans-serif;
     color: #fff;
+    box-shadow: inset 0 0 0 1000px #00000079;
     font-size: 2.5rem;
     margin: 0;
     text-align: center;
@@ -247,7 +250,7 @@ header {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    background-image: url(../images/hero-bg.jpg); }
+    background-image: url(https://daryo.uz/cache/2020/06/photo_2020-06-19_08-02-09-1280x905.jpg); }
   #rahbariyat .cards {
     padding: 30px;
     display: grid;
