@@ -229,11 +229,13 @@ header {
       padding: 20px; }
     #news .news {
       padding: 0 20px; }
-      #news .news .janaliqlar img {
-        width: 200px; }
-      #news .news .janaliqlar p {
-        font-size: .5rem;
-        padding: 10px; } }
+      #news .news .janaliqlar {
+        flex-direction: column; }
+        #news .news .janaliqlar img {
+          width: 200px; }
+        #news .news .janaliqlar p {
+          font-size: .5rem;
+          padding: 10px; } }
 
 #rahbariyat {
   width: 100%;

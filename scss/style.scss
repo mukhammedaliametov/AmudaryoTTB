@@ -318,6 +318,7 @@ header {
     .news{
       padding: 0 20px;
       .janaliqlar{
+        flex-direction: column;
         img{
           width: 200px;
         }
