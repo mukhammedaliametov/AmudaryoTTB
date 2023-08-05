@@ -9,6 +9,11 @@ buttonEl.addEventListener('click', () => {
   buttonEl.classList.toggle('active');
 });
 
+const closeNav = () => {
+  navEl.classList.remove('active');
+  buttonEl.classList.remove('active');
+}
+
 window.onscroll = function () { myFunction() };
 var sticky = headerEl.offsetTop;
 
