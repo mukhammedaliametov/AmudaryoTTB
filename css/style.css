@@ -218,6 +218,8 @@ header {
         font-family: "Ubuntu", sans-serif;
         padding: 40px; }
   @media only screen and (max-width: 1024px) {
+    #news h1 {
+      padding: 20px; }
     #news .news .janaliqlar img {
       width: 400px; }
     #news .news .janaliqlar p {
@@ -237,10 +239,10 @@ header {
           font-size: 1rem;
           padding: 10px; } }
 
-#rahbariyat {
+#managament {
   width: 100%;
   height: 100vh; }
-  #rahbariyat h1 {
+  #managament h1 {
     font-family: "Barlow", sans-serif;
     color: #fff;
     box-shadow: inset 0 0 0 1000px #00000079;
@@ -253,47 +255,47 @@ header {
     background-position: center;
     background-size: cover;
     background-image: url(https://daryo.uz/cache/2020/06/photo_2020-06-19_08-02-09-1280x905.jpg); }
-  #rahbariyat .cards {
+  #managament .cards {
     padding: 30px;
     display: grid;
     grid-template-columns: auto auto auto auto; }
-    #rahbariyat .cards .card {
+    #managament .cards .card {
       flex-direction: column;
       border: 1px solid #1f73cf;
       border-radius: 10px;
       padding: 10px;
       margin: 10px;
       text-align: center; }
-      #rahbariyat .cards .card img {
+      #managament .cards .card img {
         width: 270px;
         height: 370px;
         border-radius: 10px; }
-      #rahbariyat .cards .card .user-name {
+      #managament .cards .card .user-name {
         display: inline; }
-        #rahbariyat .cards .card .user-name .span {
+        #managament .cards .card .user-name .span {
           border-bottom: 1px solid #1e2e60;
           margin: 10px;
           padding-bottom: 10px; }
-        #rahbariyat .cards .card .user-name span {
+        #managament .cards .card .user-name span {
           color: #1f73cf;
           font-size: 1.2rem;
           text-align: center;
           display: inline-block; }
-          #rahbariyat .cards .card .user-name span i {
+          #managament .cards .card .user-name span i {
             color: #000; }
   @media only screen and (max-width: 1300px) {
-    #rahbariyat .cards {
+    #managament .cards {
       grid-template-columns: auto auto auto; } }
   @media only screen and (max-width: 1024px) {
-    #rahbariyat h1 {
+    #managament h1 {
       padding: 20px; }
-    #rahbariyat .cards {
+    #managament .cards {
       grid-template-columns: auto auto; } }
-  @media only screen and (max-width: 1024px) {
-    #rahbariyat h1 {
+  @media only screen and (max-width: 420px) {
+    #managament h1 {
       font-size: 1.6rem;
-      padding: 10px; }
-    #rahbariyat .cards {
+      padding: 20px; }
+    #managament .cards {
       grid-template-columns: auto; } }
 
 /*# sourceMappingURL=style.css.map */
