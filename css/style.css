@@ -42,16 +42,19 @@ header .second-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 63px;
   background: #1f73cf;
   padding: 20px 80px;
   z-index: 999;
+  position: fixed;
+  width: 100%;
+  transition: 0.5s ease-in-out;
 }
 header .second-header .logo {
   font-size: 2rem;
   font-family: "Ubuntu", sans-serif;
   display: flex;
   align-items: center;
-  cursor: pointer;
 }
 header .second-header .logo img {
   width: 10%;
@@ -69,6 +72,11 @@ header .second-header .navigation a {
 header .second-header .navigation a:hover {
   text-decoration: underline;
 }
+header .second-header.sticky {
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
 header .second-header .hamburger {
   display: none;
 }
@@ -78,12 +86,14 @@ header .second-header .hamburger {
   }
   header .second-header {
     padding: 12px 60px;
+    top: 50px;
   }
   header .second-header .logo img {
     width: 9%;
   }
   header .second-header .hamburger {
     display: none;
+    padding: 5px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -100,37 +110,23 @@ header .second-header .hamburger {
     padding: 10px 0px;
     margin: 0;
   }
-}
-@media only screen and (max-width: 420px) {
-  header .first-header {
-    padding: 15px 20px;
-    flex-direction: column;
-  }
-  header .first-header .nav-info {
-    flex-direction: column;
-    text-align: center;
-    gap: 0;
-  }
-  header .first-header .nav-info a {
-    padding: 10px 0px;
-    margin: 0;
-  }
   header .second-header {
     z-index: 999;
+    top: 100px;
     padding: 5px 20px;
   }
   header .second-header .logo {
     font-size: 1.5rem;
   }
   header .second-header .logo img {
-    width: 25%;
+    width: 15%;
     margin-right: 3px;
   }
   header .second-header .navigation {
     position: absolute;
     display: inline;
     background: #1f73cf;
-    top: 215px;
+    top: 70px;
     width: 100%;
     left: 0;
     height: 0vh;
@@ -148,6 +144,7 @@ header .second-header .hamburger {
   }
   header .second-header .navigation.active {
     height: 30vh;
+    padding-top: 30px;
   }
   header .second-header .navigation.active li {
     display: block;
@@ -167,6 +164,78 @@ header .second-header .hamburger {
   }
   header .second-header .hamburger.active .fa-bars {
     display: none;
+  }
+}
+@media only screen and (max-width: 420px) {
+  header .first-header {
+    padding: 15px 20px;
+    flex-direction: column;
+  }
+  header .first-header .nav-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+  header .first-header .nav-info a {
+    padding: 10px 0px;
+    margin: 0;
+  }
+  header .second-header {
+    top: 140px;
+  }
+  header .second-header .logo img {
+    width: 25%;
+  }
+}
+
+#home {
+  background: url(../images/hero-bg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4745098039);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#home .home-title {
+  text-align: center;
+  width: 50%;
+  margin-left: 25%;
+}
+#home .home-title h1 {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.6rem;
+}
+#home .home-title p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+#home .home-title a {
+  background: #1f73cf;
+  padding: 12px 50px;
+  font-family: "Barlow", sans-serif;
+  border-radius: 5px;
+}
+#home .home-title a:hover {
+  background: transparent;
+  border: 1px solid #1f73cf;
+}
+#home .home-title a:active {
+  background: #1f73cf;
+}
+@media only screen and (max-width: 1024px) {
+  #home {
+    padding: 10px 20px;
+  }
+  #home .home-title {
+    width: 100%;
+    margin-left: 0;
+  }
+  #home .home-title p {
+    font-family: "Ubuntu", sans-serif;
   }
 }
 
