@@ -1,2 +1,2 @@
 # AmudaryoTTB
-this project is a real project!!
+this project in the tutorial!
